@@ -153,15 +153,14 @@ bottomContentPara[2].textContent =
 //   location.textContent = siteContent.contact[index];
 // });
 
-console.log(newPara);
-contactHeading.textContent = siteContent.contact['contact-h4'];
-contactPara[0].textContent = siteContent.contact.address.slice(0, 19);
-contactPara[0].append(newPara);
-//new element for first paragraph break;
 const newPara = document.createElement('p');
 newPara.textContent = contactPara[0].textContent = siteContent.contact.address.slice(
   19
 );
+console.log(newPara);
+contactHeading.textContent = siteContent.contact['contact-h4'];
+contactPara[0].textContent = siteContent.contact.address.slice(0, 19);
+contactPara[0].append(newPara);
 contactPara[1].textContent = siteContent.contact.phone;
 contactPara[2].textContent = siteContent.contact.email;
 
