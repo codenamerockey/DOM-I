@@ -157,6 +157,7 @@ const newPara = document.createElement('p');
 newPara.textContent = contactPara[0].textContent = siteContent.contact.address.slice(
   19
 );
+newPara.style.margin = '0';
 console.log(newPara);
 contactHeading.textContent = siteContent.contact['contact-h4'];
 contactPara[0].textContent = siteContent.contact.address.slice(0, 19);
