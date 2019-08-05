@@ -114,7 +114,7 @@ ctaImage.setAttribute('src', siteContent.cta['img-src']);
 //CTA Button Event stretch goal
 ctaBtn.addEventListener('click', () => {
   ctaHeading.textContent =
-    "If You're Reading This Then You have Been Clicking Around!! Nice Job!";
+    "If You're Reading This Then You have Been Clicking Around!! Nice Job";
 });
 
 //Main Content Top Section
@@ -153,8 +153,15 @@ bottomContentPara[2].textContent =
 //   location.textContent = siteContent.contact[index];
 // });
 
+console.log(newPara);
 contactHeading.textContent = siteContent.contact['contact-h4'];
-contactPara[0].textContent = siteContent.contact.address;
+contactPara[0].textContent = siteContent.contact.address.slice(0, 19);
+contactPara[0].append(newPara);
+//new element for first paragraph break;
+const newPara = document.createElement('p');
+newPara.textContent = contactPara[0].textContent = siteContent.contact.address.slice(
+  19
+);
 contactPara[1].textContent = siteContent.contact.phone;
 contactPara[2].textContent = siteContent.contact.email;
 
