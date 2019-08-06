@@ -111,11 +111,17 @@ ctaHeading.textContent = siteContent.cta.h1;
 ctaBtn.textContent = siteContent.cta.button;
 ctaImage.setAttribute('src', siteContent.cta['img-src']);
 
+//created new elements for title.
 const br = document.createElement('br');
+const is = document.createElement('p');
+is.textContent = 'is';
+const awesome = document.createElement('p');
+awesome.textContent = 'awesome';
 console.log(br);
 const headerCTA = document.querySelector('div.cta-text h1');
-headerCTA.innerHTML = 'Dom <br> is <br> awesome';
-console.log(headerCTA);
+headerCTA.textContent = 'Dom';
+headerCTA.append(is);
+headerCTA.append(awesome);
 
 //CTA Button Event stretch goal
 ctaBtn.addEventListener('click', () => {
